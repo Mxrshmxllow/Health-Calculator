@@ -20,6 +20,11 @@ export class CalculatorPage {
 
   }
 calculateIBW(){
+  this.robinson = parseFloat(this.robinson.toFixed(2))
+  this.miller = parseFloat(this.miller.toFixed(2))
+  this.hamwi = parseFloat(this.hamwi.toFixed(2))
+  this.devine = parseFloat(this.devine.toFixed(2))
+
   if (this.feet = 5, this.gender ="m"){
     this.robinson = 52 + (1.9*this.inches)
     this.miller = 56.2 + (1.41*this.inches)

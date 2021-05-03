@@ -13,17 +13,17 @@
   <ion-list>
 
   <ion-item>
-    <ion-label color="dark" [(ngModel)]="feet">Feet:</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-label color="dark">Feet:</ion-label>
+    <ion-input type="number" [(ngModel)]="feet"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label color="dark" [(ngModel)]="inches">Inches:</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-label color="dark">Inches:</ion-label>
+    <ion-input type="number" [(ngModel)]="inches"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label color="dark"> Gender: </ion-label>
-    <ion-select interface="popover" [(ngModel)]="gender">
+    <ion-select interface="popover">
       <ion-option value="m">Male</ion-option>
       <ion-option value="f">Female</ion-option>
     </ion-select>
@@ -32,8 +32,12 @@
     Calculate
   </button>
 
-    <ion-item *ngIf="ibw">
-    <h2>Your BMI is: {{bmi}} <code> ({{message}}) </code></h2>
+    <ion-item *ngIf="robinson">
+    <h2>Ideal Weight According to:</h2>
+    <p>Robinson: {{robinson}}</p>
+    <p>Miller: {{miller}}</p>
+    <p>Hamwi: {{hamwi}}</p>
+    <p>Devine: {{devine}}</p>
   </ion-item>
 
 
