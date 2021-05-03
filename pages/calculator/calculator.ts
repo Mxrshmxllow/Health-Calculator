@@ -3,12 +3,40 @@ import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-calculator',
-  templateUrl: 'calculator.html'
+  templateUrl: 'calculator.html',
+  styleUrls:['calculator.css']
 })
 export class CalculatorPage {
+  feet: number;
+  inches: number;
+  robinson: number;
+  miller: number;
+  hamwi: number;
+  devine: number;
+  gender: string;
+  message: string;
 
   constructor(public navCtrl: NavController) {
 
   }
+calculateIBW(){
+  if (this.feet = 5, this.gender ="m"){
+    this.robinson = 52 + (1.9*this.inches)
+    this.miller = 56.2 + (1.41*this.inches)
+    this.hamwi = 48 + (2.7*this.inches)
+    this.devine = 50 + (2.3*this.inches)
+  }
+  else if (this.feet = 5, this.gender ="f"){
+    this.robinson = 49 + (1.7*this.inches)
+    this.miller = 53.1 + (1.36*this.inches)
+    this.hamwi = 45.5 + (2.2*this.inches)
+    this.devine = 45.5 + (2.3*this.inches)
+  }
 
+  this.message = "Robinson (1983): " + this.robinson + "\nMiller (1983): " + this.miller + "\nHamwi (1964): " + this.hamwi + "Devine (1974): " + this.devine;
+
+
+  }
 }
+
+

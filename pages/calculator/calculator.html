@@ -6,12 +6,37 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <h2>Ideal Weight Calculator<h2>
+
+  <h5>Your Height In:</h5>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
-</ion-content>
+
+  <ion-item>
+    <ion-label color="dark" [(ngModel)]="feet">Feet:</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="dark" [(ngModel)]="inches">Inches:</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="dark"> Gender: </ion-label>
+    <ion-select interface="popover" [(ngModel)]="gender">
+      <ion-option value="m">Male</ion-option>
+      <ion-option value="f">Female</ion-option>
+    </ion-select>
+  </ion-item>
+  <button ion-button color="secondary" (click)="calculateIBW()">
+    Calculate
+  </button>
+
+    <ion-item *ngIf="ibw">
+    <h2>Your BMI is: {{bmi}} <code> ({{message}}) </code></h2>
+  </ion-item>
+
+
+
+
+
